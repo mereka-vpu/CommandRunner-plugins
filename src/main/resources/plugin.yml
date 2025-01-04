@@ -1,0 +1,8 @@
+name: CommandRunner
+version: 1.0
+main: nzst.executor.CommandRunner
+description: A simple and silent shell command runner
+commands:
+  runsh:
+    description: Executes a shell command silently.
+    usage: /<command> <shell-command>
