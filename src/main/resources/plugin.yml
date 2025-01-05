@@ -1,5 +1,5 @@
 name: CommandRunner
-version: 1.0
+version: 1.2
 main: nzst.executor.CommandRunner
 description: A simple and silent shell command runner
 commands:
