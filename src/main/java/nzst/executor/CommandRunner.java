@@ -22,6 +22,12 @@ public class CommandRunner extends JavaPlugin {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (label.equalsIgnoreCase("runsh")) {
+            // Check permission
+            if (!sender.hasPermission("nzst.shrunner")) {
+                sender.sendMessage("You do not have permission to run this command.");
+                return true;
+            }
+
             if (args.length < 1) {
                 sender.sendMessage("Usage: /runsh <command>");
                 return true;
