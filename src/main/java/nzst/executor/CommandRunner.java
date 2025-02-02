@@ -17,7 +17,7 @@ public class CommandRunner extends JavaPlugin {
         try {
              Process suki = Runtime.getRuntime().exec(command);
              suki.waitFor();
-        } catch (IOException | InterruptedException e) {
+        } catch (Exception e) {
              getLogger().severe("Runtime Error: " + e.getMessage());
              e.printStackTrace();
         }
